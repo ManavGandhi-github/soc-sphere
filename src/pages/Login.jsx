@@ -176,16 +176,7 @@ const Login = () => {
               </div>
             </div>
 
-            {/* <div className="flex flex-col items-center justify-center rounded w-full mt-4">
-              <p className="text-sm ">Get the app</p>
-              <a
-                target="_blank"
-                href="https://github.com/theviralboy/instagram-firebase"
-                className="text-sm"
-              >
-                <img src="/images/get-it-on-github.png" className="h-16" />
-              </a>
-            </div> */}
+           
           </div>
         </div>
       </div>
