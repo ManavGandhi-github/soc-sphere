@@ -17,9 +17,9 @@ import {
   import HomePostCard from "../components/HomePostCard";
   import { Link } from "react-router-dom";
   import { AuthContext } from "../context/AuthContext";
-  import Stories from "../components/Stories";
+  //import Stories from "../components/Stories";
   import Footer from "../components/Footer";
-  import { FakeUsers } from "../constants/fakeData";
+  //import { FakeUsers } from "../constants/fakeData";
   
   const Home = () => {
     const { user } = useContext(AuthContext);
@@ -73,7 +73,7 @@ import {
         <Header />
         <div className="flex md:mt-14  max-w-4xl gap-2 mx-auto mb-8">
           <div className="w-full md:w-[70%]">
-            <Stories />
+            {/* <Stories /> */}
             <div>
               {posts?.map((post) => (
                 <HomePostCard post={post} key={post?.id} />

@@ -10,7 +10,7 @@ const NotFound = () => {
           The link you followed may be broken, or the page may have been
           removed.
           <Link to="/" className="text-blue-500">
-            Go back to Instagram.
+            Go back to Soc-Space.
           </Link>
         </p>
       </div>

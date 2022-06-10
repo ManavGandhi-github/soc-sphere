@@ -11,12 +11,12 @@ import { AuthContext } from "../context/AuthContext.js";
 // pages
 
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Explore from "./Explore";
-import Home from "./Home";
-import Login from "./Login";
-import Profile from "./Profile";
-import Register from "./Register";
-import Post from "./Post";
+import Explore from "../pages/Explore";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Profile from "../pages/Profile";
+import Register from "../pages/Register";
+import Post from "../pages/Post";
 
 const RequireAuth = ({ children }) => {
   const { user } = useContext(AuthContext);
