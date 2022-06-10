@@ -13,7 +13,7 @@ const firebaseConfig = {
   storageBucket: "ig-clone-cefdc.appspot.com",
   messagingSenderId: "736638316831",
   appId: "1:736638316831:web:40cb54c49437029215402a",
-  measurementId: "G-EY6LG8DKL4"
+  measurementId: "G-EY6LG8DKL4",
 };
 
 const app = initializeApp(firebaseConfig);
