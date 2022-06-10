@@ -6,12 +6,12 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext.js";
+import { AuthContext } from "./context/AuthContext.js";
 
 // pages
 
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Explore from "./Explore";
+import Explore from "./pages/Explore";
 import Home from "./Home";
 import Login from "./Login";
 import Profile from "./Profile";
