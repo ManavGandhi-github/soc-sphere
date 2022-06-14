@@ -16,7 +16,7 @@ import { Pagination } from "swiper";
 // import { motion } from "framer-motion";
 
 // icons
-import { CgHeart as HeartIcon } from "react-icons/cg";
+import { AiOutlineLike as HeartIcon } from "react-icons/ai";
 import { FaHeart as HeartFillIcon } from "react-icons/fa";
 import { RiChat3Line as CommentIcon } from "react-icons/ri";
 import { FiSend as SendIcon } from "react-icons/fi";
