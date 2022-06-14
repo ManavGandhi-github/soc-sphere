@@ -6,7 +6,7 @@ import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  // your firebase config here
+  //my firebase config here
   apiKey: "AIzaSyDlwib0C4QukHr2gcQS1o3oFVkdktJc6Vk",
   authDomain: "ig-clone-cefdc.firebaseapp.com",
   projectId: "ig-clone-cefdc",
@@ -14,6 +14,7 @@ const firebaseConfig = {
   messagingSenderId: "736638316831",
   appId: "1:736638316831:web:40cb54c49437029215402a",
   measurementId: "G-EY6LG8DKL4",
+ 
 };
 
 const app = initializeApp(firebaseConfig);

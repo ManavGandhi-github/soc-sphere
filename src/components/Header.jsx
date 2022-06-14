@@ -18,9 +18,9 @@ import { AiOutlineSearch as SearchIcon } from "react-icons/ai";
 import { ImProfile as ProfileIcon } from "react-icons/im";
 import { VscClose as CloseIcon } from "react-icons/vsc";
 import { ImSpinner3 as SpinnerIcon } from "react-icons/im";
-import { BsBookmark as SavedIcon } from "react-icons/bs";
-import { FiSettings as SettingIcon } from "react-icons/fi";
-import { RiExchangeFundsLine as SwitchIcon } from "react-icons/ri";
+// import { BsBookmark as SavedIcon } from "react-icons/bs";
+import { VscSettings as SettingIcon } from "react-icons/vsc";
+// import { RiExchangeFundsLine as SwitchIcon } from "react-icons/ri";
 
 // firebase
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
@@ -154,7 +154,7 @@ const Header = () => {
                       alt={user?.name}
                     />
                     {menuOpen && (
-                      <div className="absolute z-30 -bottom-5 w-[200px] right-0 translate-y-full bg-white shadow rounded text-xs">
+                      <div className="absolute z-30 -bottom-5 w-[200px] right-0 translate-y-full bg-cyan-500 shadow rounded text-xs">
                         <ul className="flex flex-col p-3 justify-center gap-2">
                           <li onClick={() => setMenuOpen(!menuOpen)}>
                             <Link
@@ -164,33 +164,33 @@ const Header = () => {
                               <div>
                                 <ProfileIcon />
                               </div>
-                              <div>Profile</div>
+                              <div>Soc Profile</div>
                             </Link>
                           </li>
-                          <li onClick={() => setMenuOpen(!menuOpen)}>
+                          {/* <li onClick={() => setMenuOpen(!menuOpen)}>
                             <div className="flex items-center gap-1">
                               <div>
                                 <SavedIcon />
                               </div>
                               <div>Saved</div>
                             </div>
-                          </li>
+                          </li> */}
                           <li onClick={() => setMenuOpen(!menuOpen)}>
                             <div className="flex items-center gap-1">
                               <div>
                                 <SettingIcon />
                               </div>
-                              <div>Setting</div>
+                              <div>Soc Settings</div>
                             </div>
                           </li>
-                          <li onClick={() => setMenuOpen(!menuOpen)}>
+                          {/* <li onClick={() => setMenuOpen(!menuOpen)}>
                             <div className="flex items-center gap-1">
                               <div>
                                 <SwitchIcon />
                               </div>
                               <div>Switch</div>
                             </div>
-                          </li>
+                          </li> */}
                         </ul>
                         <button
                           onClick={() => {
@@ -311,7 +311,7 @@ const Header = () => {
                       )}
                       <form onSubmit={uploadImage}>
                         {uploading ? (
-                          <div className="rounded my-3 overflow-hidden w-full bg-gray-200">
+                          <div className="rounded my-3 overflow-hidden w-full bg-cyan-200">
                             <div
                               className="h-1 bg-blue-500 rounded transition-all"
                               style={{ width: `${percentage}%` }}

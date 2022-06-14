@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import Footer from "../components/Footer";
 
 // icons
-import { ImFacebook2 as FacebookIcon } from "react-icons/im";
 import { AiFillEye as EyeIcon } from "react-icons/ai";
 import { AiFillEyeInvisible as EyeInvisibleIcon } from "react-icons/ai";
 import { ImSpinner3 as SpinnerIcon } from "react-icons/im";
@@ -90,25 +89,14 @@ const Register = () => {
                   alt="instagram"
                 />
               </div>
-              <p className="text-center font-bold  text-lg text-slate-800">
-                Sign up to see photos and videos from your friends.
+              <p className="text-center font-bold  text-lg text-cyan-600">
+                Sign up now to Soc Space! The trendy new social media app
               </p>
-              <div className="my-4 bg-blue-500 p-2 w-full rounded">
-                <button
-                  className="text-white flex items-center justify-center w-full"
-                  type="button"
-                  disabled
-                >
-                  <FacebookIcon fill="#fff" />
-                  <span className="text-xs font-semibold ml-1">
-                    Log in with Facebook
-                  </span>
-                </button>
-              </div>
+            
               <div className="flex gap-2 items-center my-3 w-full">
                 <div className="border-b-[1px] bg-transparent border-gray-400 h-0 w-full"></div>
                 <div className="uppercase text-gray-500 font-semibold text-base">
-                  or
+                  
                 </div>
                 <div className="border-b-[1px] bg-transparent border-gray-400 h-0 w-full"></div>
               </div>
@@ -182,14 +170,14 @@ const Register = () => {
                     </div>
                     <div className="w-full mt-2">
                       <button
-                        className="w-full bg-blue-400 text-xs text-white font-semibold p-1 rounded-sm"
+                        className="w-full bg-cyan-400 text-xs text-white font-semibold p-1 rounded-sm"
                         disabled={disabled}
                         type="submit"
                       >
                         {formLoading ? (
                           <SpinnerIcon className="w-3 h-3 animate-spin my-1 mx-auto" />
                         ) : (
-                          "Sign up"
+                          "Sign up to Soc Space!"
                         )}
                       </button>
                     </div>
@@ -199,17 +187,15 @@ const Register = () => {
                       {errorMsg}
                     </div>
                   )}
-                  <div className="text-center w-full text-xs font-thin my-4">
-                    <a href="/accounts/password/reset/">Forgot password?</a>
-                  </div>
+                  
                 </form>
               </div>
             </div>
 
             <div className="flex flex-col items-center justify-center rounded w-full border-[1px] border-gray-300 mt-4 bg-white p-6">
               <div className="text-sm">
-                Have an account?{" "}
-                <Link to="/login" className="text-blue-500 font-semibold">
+                Have a Soc Space account?{" "}
+                <Link to="/login" className="text-orange-500 font-semibold">
                   Log in
                 </Link>
               </div>
@@ -219,7 +205,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+    
     </>
   );
 };

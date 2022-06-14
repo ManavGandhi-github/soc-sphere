@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div className="w-full h-full flex justify-center flex-col items-center">
       <div className="text-center">
-        <b className="text-xl mb-5">Sorry, this page isn't available.</b>
+        <b className="text-xl mb-5">Sorry, this Soc page isn't available.</b>
         <p>
           The link you followed may be broken, or the page may have been
           removed.

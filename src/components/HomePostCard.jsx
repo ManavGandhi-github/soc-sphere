@@ -20,9 +20,6 @@ import { AiFillLike as HeartIcon } from "react-icons/ai";
 import { FaHeartbeat as HeartFillIcon } from "react-icons/fa";
 import { RiChatSmile3Fill as CommentIcon } from "react-icons/ri";
 import { MdSendToMobile as SendIcon } from "react-icons/md";
-//import { BsBookmark as TagIcon } from "react-icons/bs";
-// import { BsBookmarkFill as TagFillIcon } from "react-icons/bs";
-// import { IoEllipsisHorizontalSharp as PostMenuIcon } from "react-icons/io5";
 import { AiOutlineComment as CommentLine } from "react-icons/ai";
 import { GoChevronRight as NextIcon } from "react-icons/go";
 import { MdVerified as VerifiedIcon } from "react-icons/md";
@@ -261,9 +258,6 @@ const HomePostCard = ({ post }) => {
               <SendIcon />
             </button>
           </div>
-          {/* <button onClick={saved ? unsavePost : savePost}>
-            {saved ? <TagFillIcon /> : <TagIcon />}
-          </button> */}
         </div>
         <div className="text-sm font-semibold">
           {post?.likedBy?.length > 0 && (
@@ -284,13 +278,13 @@ const HomePostCard = ({ post }) => {
               onClick={() => setLimitNum(limitNum + 5)}
               className="block text-xs my-3 text-cyan-800 cursor-pointer"
             >
-              View all comments
+              View all Soc comments
             </div>
           )}
         </div>
         <div className="flex flex-col gap-3" id="#comments">
           {commentsArr?.map((comment) => (
-            // console.log(comment),
+            
             <div key={comment?.id} className="flex justify-between gap-2">
               <div>
                 <Link to={`/${comment?.username}`}>
@@ -319,7 +313,6 @@ const HomePostCard = ({ post }) => {
                     : comment?.comment}
                 </span>
               </div>
-              {/* <div>{comment?.commentedAt?.toDate().toLocaleTimeString()}</div> */}
             </div>
           ))}
         </div>

@@ -81,15 +81,15 @@ const Home = () => {
           </div>
           {posts?.length === 0 && (
             <div className="flex items-center justify-center h-screen">
-              <div className="text-center">No posts yet</div>
+              <div className="text-center">No Soc posts yet</div>
             </div>
           )}
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setLimitNum(limitNum + 9)}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-cyan-200 hover:bg-cyan-500 text-orange-400 font-bold py-2 px-4 rounded"
             >
-              Load More
+              Load More Soc Posts
             </button>
           </div>
         </div>

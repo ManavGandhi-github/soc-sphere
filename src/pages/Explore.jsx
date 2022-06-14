@@ -73,7 +73,7 @@ const Explore = () => {
           {posts.map((post, index) => (
             <ProfilePostCard
               key={post?.id}
-              //   span={(index + 1) % 2 === 0 && (index + 1) % 3 !== 0}
+      
               span={[2, 10, 20, 28, 38].includes(index + 1)}
               post={post}
             />
