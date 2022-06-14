@@ -100,7 +100,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-white border-b-[1px] z-50">
+      <header className="fixed top-0 left-0 w-full bg-blue-200 border-b-[1px] z-50">
         <div className="p-2 max-w-4xl mx-auto  flex items-center justify-between ">
           <div>
             <Link to="/">
@@ -112,7 +112,7 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <div className="hidden sm:block p-2 rounded-lg bg-gray-200 items-center">
+            <div className="hidden sm:block p-2 rounded-lg bg-blue-400 items-center">
               <form onSubmit={(e) => e.preventDefault()}>
                 <div className="flex gap-2 text-gray-600">
                   <SearchIcon size={20} />
@@ -127,7 +127,7 @@ const Header = () => {
           </div>
           {user ? (
             <>
-              <div className="flex items-center text-slate-800 text-2xl gap-3">
+              <div className="flex items-center text-slate-100 text-2xl gap-3">
                 <NavLink to="/">
                   <HomeIcon />
                 </NavLink>
@@ -150,9 +150,7 @@ const Header = () => {
                   >
                     <img
                       className="h-6 md:border-[1px] border-slate-900 rounded-full aspect-square"
-                      // src={
-                      //   "https://lh3.googleusercontent.com/a-/AOh14Gh94MS2OYdnk63M-e_5MLwokYLufFvBMzlHp93wtg=s96-c"
-                      // }
+                      
                       src={user?.photoURL}
                       alt={user?.name}
                     />
