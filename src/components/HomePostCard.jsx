@@ -16,14 +16,14 @@ import { Pagination } from "swiper";
 // import { motion } from "framer-motion";
 
 // icons
-import { AiOutlineLike as HeartIcon } from "react-icons/ai";
-import { FaHeart as HeartFillIcon } from "react-icons/fa";
-import { RiChat3Line as CommentIcon } from "react-icons/ri";
-import { FiSend as SendIcon } from "react-icons/fi";
-import { BsBookmark as TagIcon } from "react-icons/bs";
-import { BsBookmarkFill as TagFillIcon } from "react-icons/bs";
-import { IoEllipsisHorizontalSharp as PostMenuIcon } from "react-icons/io5";
-import { AiOutlineSmile as SmileIcon } from "react-icons/ai";
+import { AiFillLike as HeartIcon } from "react-icons/ai";
+import { FaHeartbeat as HeartFillIcon } from "react-icons/fa";
+import { RiChatSmile3Fill as CommentIcon } from "react-icons/ri";
+import { MdSendToMobile as SendIcon } from "react-icons/md";
+//import { BsBookmark as TagIcon } from "react-icons/bs";
+// import { BsBookmarkFill as TagFillIcon } from "react-icons/bs";
+// import { IoEllipsisHorizontalSharp as PostMenuIcon } from "react-icons/io5";
+import { AiOutlineComment as CommentLine } from "react-icons/ai";
 import { GoChevronRight as NextIcon } from "react-icons/go";
 import { MdVerified as VerifiedIcon } from "react-icons/md";
 
@@ -172,7 +172,7 @@ const HomePostCard = ({ post }) => {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="sm:mb-6 bg-white sm:border-[1px] rounded"
+      className="sm:mb-6 bg-cyan-300 sm:border-[1px] rounded"
     >
       <div className="flex gap-3 items-center p-2 justify-between">
         <Link to={`/${post?.user?.username}`}>
@@ -190,9 +190,9 @@ const HomePostCard = ({ post }) => {
             {post?.user?.username}
           </Link>
         </div>
-        <button>
+        {/* <button>
           <PostMenuIcon />
-        </button>
+        </button> */}
       </div>
       <Link to={`/p/${post?.id}`}>
         {!post?.carouselMedia && (
@@ -247,7 +247,7 @@ const HomePostCard = ({ post }) => {
           <div className="flex w-full text-slate-900 gap-2">
             {liked ? (
               <button onClick={unlikePost}>
-                <HeartFillIcon color="#ff2828" />
+                <HeartFillIcon color="#ff8c00" />
               </button>
             ) : (
               <button onClick={likePost}>
@@ -261,9 +261,9 @@ const HomePostCard = ({ post }) => {
               <SendIcon />
             </button>
           </div>
-          <button onClick={saved ? unsavePost : savePost}>
+          {/* <button onClick={saved ? unsavePost : savePost}>
             {saved ? <TagFillIcon /> : <TagIcon />}
-          </button>
+          </button> */}
         </div>
         <div className="text-sm font-semibold">
           {post?.likedBy?.length > 0 && (
@@ -271,7 +271,7 @@ const HomePostCard = ({ post }) => {
           )}
           <div className="my-2">
             {post?.caption && (
-              <div className="text-sm text-gray-700">
+              <div className="text-sm text-cyan-700">
                 <Link to={`/${post.user.username}`} className="font-bold">
                   {post?.user?.username}
                 </Link>{" "}
@@ -282,9 +282,9 @@ const HomePostCard = ({ post }) => {
           {commentsArr?.length > 0 && (
             <div
               onClick={() => setLimitNum(limitNum + 5)}
-              className="block text-xs my-3 text-slate-600 cursor-pointer"
+              className="block text-xs my-3 text-cyan-800 cursor-pointer"
             >
-              View more comments
+              View all comments
             </div>
           )}
         </div>
@@ -308,7 +308,7 @@ const HomePostCard = ({ post }) => {
                 <b className="inline-flex">
                   <Link to={`/${comment?.username}`}>{comment?.username}</Link>
                   {comment?.isVerified && (
-                    <span className="aspect-square rounded-full text-blue-500">
+                    <span className="aspect-square rounded-full text-cyan-900">
                       <VerifiedIcon />
                     </span>
                   )}
@@ -324,23 +324,23 @@ const HomePostCard = ({ post }) => {
           ))}
         </div>
       </div>
-      <div className=" sm:block sm:border-t-[1px] text-slate-900 p-3 border-slate-500/30">
+      <div className=" sm:block sm:border-t-[1px] text-orange-900 p-3 border-orange-500/30">
         <form onSubmit={commentSubmit}>
           <div className="flex items-center gap-3">
-            <SmileIcon size={24} />
+            <CommentLine size={24} />
             <input
               type="text"
               className="w-full text-sm outline-none font-light"
-              placeholder="Add a comment..."
+              placeholder="Add your comment..."
               value={commentInput}
               onChange={(e) => setCommentInput(e.target.value)}
             />
             <button
               type="submit"
               disabled={commentInput.length <= 0}
-              className="text-blue-500 font-semibold text-sm"
+              className="text-orange-500 font-semibold text-sm"
             >
-              Post
+              Add Comment
             </button>
           </div>
         </form>

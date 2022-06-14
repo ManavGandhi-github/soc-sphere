@@ -9,13 +9,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // icons
-import { MdHomeFilled as HomeIcon } from "react-icons/md";
-import { RiMessengerLine as ChatIcon } from "react-icons/ri";
-import { CgAddR as AddPostIcon } from "react-icons/cg";
-import { ImCompass2 as ExploreIcon } from "react-icons/im";
-import { FiHeart as HeartIcon } from "react-icons/fi";
+import { SiHomeadvisor as HomeIcon } from "react-icons/si";
+//import { RiMessengerLine as ChatIcon } from "react-icons/ri";
+import { BiImageAdd as AddPostIcon } from "react-icons/bi";
+import { MdOutlineTravelExplore as ExploreIcon } from "react-icons/md";
+// import { FiHeart as HeartIcon } from "react-icons/fi";
 import { AiOutlineSearch as SearchIcon } from "react-icons/ai";
-import { CgProfile as ProfileIcon } from "react-icons/cg";
+import { ImProfile as ProfileIcon } from "react-icons/im";
 import { VscClose as CloseIcon } from "react-icons/vsc";
 import { ImSpinner3 as SpinnerIcon } from "react-icons/im";
 import { BsBookmark as SavedIcon } from "react-icons/bs";
@@ -100,7 +100,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-blue-200 border-b-[1px] z-50">
+      <header className="fixed top-0 left-0 w-full bg-orange-200 border-b-[1px] z-50">
         <div className="p-2 max-w-4xl mx-auto  flex items-center justify-between ">
           <div>
             <Link to="/">
@@ -112,7 +112,7 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <div className="hidden sm:block p-2 rounded-lg bg-blue-400 items-center">
+            <div className="hidden sm:block p-2 rounded-lg bg-orange-400 items-center">
               <form onSubmit={(e) => e.preventDefault()}>
                 <div className="flex gap-2 text-gray-600">
                   <SearchIcon size={20} />
@@ -131,18 +131,18 @@ const Header = () => {
                 <NavLink to="/">
                   <HomeIcon />
                 </NavLink>
-                <div>
+                {/* <div>
                   <ChatIcon />
-                </div>
+                </div> */}
                 <button onClick={() => setModelOpen(true)}>
                   <AddPostIcon />
                 </button>
                 <NavLink to="/explore">
                   <ExploreIcon size={20} />
                 </NavLink>
-                <div>
+                {/* <div>
                   <HeartIcon />
-                </div>
+                </div> */}
                 {user ? (
                   <div
                     className="relative cursor-pointer"
@@ -150,7 +150,6 @@ const Header = () => {
                   >
                     <img
                       className="h-6 md:border-[1px] border-slate-900 rounded-full aspect-square"
-                      
                       src={user?.photoURL}
                       alt={user?.name}
                     />
@@ -244,7 +243,7 @@ const Header = () => {
           </button>
           <div className="p-3 rounded-lg overflow-hidden">
             <div className="bg-white rounded-lg">
-              <div className="border-b-2 py-2 text-center">Create Post</div>
+              <div className="border-b-2 py-2 text-center">Create your Soc Post</div>
               <div className="max-w-[422px] w-full h-full aspect-square flex items-center justify-center">
                 <div className="flex flex-col w-full overflow-hidden items-center justify-between gap-4">
                   {images ? (
@@ -307,7 +306,7 @@ const Header = () => {
                           htmlFor="formFile"
                           className="text-2xl text-center block w-full mb-2 text-gray-700"
                         >
-                          Drag photos and videos here
+                          Upload your Soc-post Photo here!
                         </label>
                       )}
                       <form onSubmit={uploadImage}>
@@ -344,7 +343,7 @@ const Header = () => {
                               type="submit"
                             >
                               <button
-                                className="bg-blue-500 px-4 py-1 
+                                className="bg-yellow-500 px-4 py-1 
                         text-white font-semibold text-sm rounded block text-center 
                         sm:inline-block mx-auto"
                                 disabled={caption.length <= 0}
