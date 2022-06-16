@@ -9,6 +9,8 @@ import {
 import { AuthContext } from "../context/AuthContext.js";
 
 // pages
+// notice the effect of modularising the code in pagewise components. The code is clean and easy to read
+//modularising also helps me debug in a simpler fashion since problems can ne pin-pointed
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Explore from "../pages/Explore";

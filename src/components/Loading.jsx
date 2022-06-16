@@ -1,5 +1,6 @@
 import React from "react";
-
+//takes care of 'Loading' UI
+//having separate file is better because it makes code more modular
 const Loading = () => {
   return (
     <div className="flex h-screen justify-center items-center">

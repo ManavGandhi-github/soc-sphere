@@ -1,10 +1,10 @@
 import { initializeApp } from "firebase/app";
-
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
-
+//firebase.google.com is very easy to use and is very user friendly.
+//Setting up firebase can be learned from manuals online
 const firebaseConfig = {
   //my firebase config here
   apiKey: "AIzaSyDlwib0C4QukHr2gcQS1o3oFVkdktJc6Vk",
