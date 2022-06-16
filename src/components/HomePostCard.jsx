@@ -3,14 +3,14 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { Link } from "react-router-dom";
 
-// Import Swiper React components
+// Importing the Swiper React components
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
-// Import Swiper styles
+// Importing the Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import required modules
+// importing the required modules
 import { Pagination } from "swiper";
 
 // import { motion } from "framer-motion";
@@ -187,9 +187,7 @@ const HomePostCard = ({ post }) => {
             {post?.user?.username}
           </Link>
         </div>
-        {/* <button>
-          <PostMenuIcon />
-        </button> */}
+       
       </div>
       <Link to={`/p/${post?.id}`}>
         {!post?.carouselMedia && (
@@ -209,8 +207,7 @@ const HomePostCard = ({ post }) => {
               navigation
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
-              // onSwiper={(swiper) => console.log(swiper)}
-              // onSlideChange={(e) => console.log(e)}
+              
               modules={[Pagination]}
             >
               {post?.carouselMedia.map((media, index) => (

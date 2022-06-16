@@ -10,17 +10,17 @@ import "swiper/css/pagination";
 
 // icons
 import { SiHomeadvisor as HomeIcon } from "react-icons/si";
-//import { RiMessengerLine as ChatIcon } from "react-icons/ri";
+
 import { BiImageAdd as AddPostIcon } from "react-icons/bi";
 import { MdOutlineTravelExplore as ExploreIcon } from "react-icons/md";
-// import { FiHeart as HeartIcon } from "react-icons/fi";
+
 import { AiOutlineSearch as SearchIcon } from "react-icons/ai";
 import { ImProfile as ProfileIcon } from "react-icons/im";
 import { VscClose as CloseIcon } from "react-icons/vsc";
 import { ImSpinner3 as SpinnerIcon } from "react-icons/im";
-// import { BsBookmark as SavedIcon } from "react-icons/bs";
+
 import { VscSettings as SettingIcon } from "react-icons/vsc";
-// import { RiExchangeFundsLine as SwitchIcon } from "react-icons/ri";
+
 
 // firebase
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
@@ -131,18 +131,14 @@ const Header = () => {
                 <NavLink to="/">
                   <HomeIcon />
                 </NavLink>
-                {/* <div>
-                  <ChatIcon />
-                </div> */}
+                
                 <button onClick={() => setModelOpen(true)}>
                   <AddPostIcon />
                 </button>
                 <NavLink to="/explore">
                   <ExploreIcon size={20} />
                 </NavLink>
-                {/* <div>
-                  <HeartIcon />
-                </div> */}
+               
                 {user ? (
                   <div
                     className="relative cursor-pointer"
@@ -167,14 +163,7 @@ const Header = () => {
                               <div>Soc Profile</div>
                             </Link>
                           </li>
-                          {/* <li onClick={() => setMenuOpen(!menuOpen)}>
-                            <div className="flex items-center gap-1">
-                              <div>
-                                <SavedIcon />
-                              </div>
-                              <div>Saved</div>
-                            </div>
-                          </li> */}
+                          
                           <li onClick={() => setMenuOpen(!menuOpen)}>
                             <div className="flex items-center gap-1">
                               <div>
@@ -183,14 +172,7 @@ const Header = () => {
                               <div>Soc Settings</div>
                             </div>
                           </li>
-                          {/* <li onClick={() => setMenuOpen(!menuOpen)}>
-                            <div className="flex items-center gap-1">
-                              <div>
-                                <SwitchIcon />
-                              </div>
-                              <div>Switch</div>
-                            </div>
-                          </li> */}
+                          
                         </ul>
                         <button
                           onClick={() => {

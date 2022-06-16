@@ -32,7 +32,7 @@ const Explore = () => {
         }));
         setposts(posts);
         setLoading(false);
-        // console.log(posts);
+        
       });
     };
     return getData();
@@ -63,7 +63,7 @@ const Explore = () => {
 
         {posts?.length === 0 && !loading && (
           <div className="flex items-center justify-center h-screen">
-            <div className="text-center">No posts yet</div>
+            <div className="text-center">No Soc posts yet</div>
           </div>
         )}
         <motion.div
@@ -84,7 +84,7 @@ const Explore = () => {
             onClick={() => setLimitNum(limitNum + 9)}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
-            Load More
+            Load More Soc
           </button>
         </div>
       </div>

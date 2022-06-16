@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-// framer motin
+// framer motion
 import { motion } from "framer-motion";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -52,18 +52,16 @@ const Profile = () => {
         where("username", "==", username)
       );
       onSnapshot(userQuery, (users) => {
-        // console.log(users);
+        
         if (!users.empty) {
           setPostIds(users?.docs[0]?.data()?.posts);
           setProfileUser({ id: users.docs[0].id, ...users?.docs[0]?.data() });
           setIsLoading(false);
           setNoUser(false);
-          // console.log(noUser);
+          
         }
         if (users.empty) {
           setProfileUser(null);
-          // console.log(noUser);
-          // console.log({ id: users.docs[0].id, ...users?.docs[0]?.data() });
           setIsLoading(false);
           setNoUser(true);
         }
@@ -84,7 +82,6 @@ const Profile = () => {
           const response = await readIds(postIds);
           if (response) {
             setPosts(response);
-            // console.log(response);
           }
         } catch (error) {
           console.log(error);
@@ -145,7 +142,6 @@ const Profile = () => {
             <div className="lg:max-w-5xl lg:mx-auto mb-8">
               <header className="flex flex-wrap items-center p-4 md:py-8">
                 <div className="md:w-3/12 md:ml-16">
-                  {/* profile image */}
                   <div className="relative group w-20 h-20 md:w-40 md:h-40 object-cover overflow-hidden rounded-full">
                     {profileUser?.id === user?.uid && (
                       <div className="absolute cursor-pointer opacity-0 group-hover:opacity-100 duration-75 transition-all top-0 left-0 h-full w-full bg-black/70 flex items-center justify-center text-2xl md:text-4xl text-white aspect-square">
@@ -208,7 +204,7 @@ const Profile = () => {
                     />
                   </div>
                 </div>
-                {/* profile meta */}
+               
                 <div className="w-8/12 md:w-7/12 ml-4">
                   <div className="md:flex md:flex-wrap md:items-center mb-4">
                     <h2 className="text-3xl inline-block font-light md:mr-2 mb-2 sm:mb-0">
@@ -245,28 +241,28 @@ const Profile = () => {
                       </button>
                     )}
                   </div>
-                  {/* post, following, followers list for medium screens */}
+                  {/* this addresses posts and following */}
                   <ul className="hidden md:flex space-x-8 mb-4">
                     <li>
                       <span className="font-semibold">
                         {profileUser?.posts?.length || 0}{" "}
                       </span>
-                      posts
+                      Soc posts
                     </li>
                     <li>
                       <span className="font-semibold">
                         {profileUser?.followedBy?.length || 0}{" "}
                       </span>
-                      followers
+                      Soc followers
                     </li>
                     <li>
                       <span className="font-semibold">
                         {profileUser?.following?.length || 0}{" "}
                       </span>
-                      following
+                      Soc following
                     </li>
                   </ul>
-                  {/* user meta form medium screens */}
+                 
                   <div className="hidden md:block">
                     <h1 className="font-semibold">{profileUser?.fullName}</h1>
                     <p className="font-normal text-sm text-gray-600">
@@ -292,7 +288,7 @@ const Profile = () => {
                     )}
                   </div>
                 </div>
-                {/* user meta form small screens */}
+               
                 <div className="md:hidden text-sm my-2">
                   <h1 className="font-semibold">{profileUser?.fullName}</h1>
                   <span>{profileUser?.categoryName}</span>
@@ -307,12 +303,12 @@ const Profile = () => {
               </header>
               {/* posts */}
               <div className="px-px md:px-3">
-                {/* user following for mobile only */}
+               
                 <ul
                   className="flex md:hidden justify-around space-x-8 border-t 
                 text-center p-2 text-gray-600 leading-snug text-sm"
                 >
-                  <li>
+                  {/* <li>
                     <span className="font-semibold text-gray-800 block">
                       {profileUser?.posts?.length || 0}{" "}
                     </span>
@@ -329,7 +325,7 @@ const Profile = () => {
                       {profileUser?.following?.length || 0}{" "}
                     </span>
                     following
-                  </li>
+                  </li> */}
                 </ul>
                 {/* flexbox grid */}
                 {posts?.length === 0 && (

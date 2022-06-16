@@ -1,4 +1,5 @@
-// export arrow function which tells valid email address
+//this function viz. isValidEmail allows me to add the functionality to determine which email is valid
+//notice application of learned concepts
 export const isValidEmail = (email) => {
     const test =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;

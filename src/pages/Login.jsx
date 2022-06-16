@@ -47,7 +47,7 @@ const Login = () => {
       }
       if (!user)
         showError(
-          "Sorry, your password was incorrect. Please double-check your password."
+          "Sorry, your Soc account password was incorrect. Please double-check your password."
         );
     }
   };
@@ -136,32 +136,17 @@ const Login = () => {
                     </div>
                     <div className="flex gap-2 items-center my-3">
                       <div className="border-b-[1px] bg-transparent border-cyan-400 h-0 w-full"></div>
-                      {/* <div className="uppercase text-gray-500 font-semibold text-base">
-                        or
-                      </div> */}
+                   
                       <div className="border-b-[1px] bg-transparent border-cyan-400 h-0 w-full"></div>
                     </div>
-                    {/* <div className="my-4 ">
-                      <button
-                        className="text-[#4267B2] flex items-center justify-center w-full"
-                        type="button"
-                        disabled
-                      >
-                        <FacebookIcon fill="#4267B2" />
-                        <span className="text-xs font-semibold ml-1">
-                          Log in with Facebook
-                        </span>
-                      </button>
-                    </div> */}
+                  
                   </div>
                   {errorMsg?.length > 0 && (
                     <div className="text-center text-xs my-4 text-red-600">
                       {errorMsg}
                     </div>
                   )}
-                  {/* <div className="text-center w-full text-xs font-thin mb-4">
-                    <a href="/forgot-password">Forgot password?</a>
-                  </div> */}
+                  
                 </form>
               </div>
             </div>
@@ -177,7 +162,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      
     </>
   );
 };

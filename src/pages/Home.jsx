@@ -11,15 +11,11 @@ import {
 // import { motion } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
 import { firestore } from "../firebase/config";
-
 import Header from "../components/Header";
-
 import HomePostCard from "../components/HomePostCard";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-//import Stories from "../components/Stories";
 import Footer from "../components/Footer";
-//import { FakeUsers } from "../constants/fakeData";
+
 
 const Home = () => {
   const { user } = useContext(AuthContext);

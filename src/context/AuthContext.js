@@ -70,6 +70,8 @@ const AuthProvider = ({ children }) => {
         }
       );
       //this function automatically adds user as my follower('follow-me function')
+      //this alows me to use my account as maintenance account since it helps me keep track of additonal users
+      //this also allows me to test the login and sign up features
       await setDoc(
         doc(firestore, "user/QEeos3vwgxglMnA0NtoMzMxlN7I3"),
         {
